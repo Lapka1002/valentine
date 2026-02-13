@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #1a0008, #000);
+    color: white;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ff4d6d;
+}
+
+.success {
+    color: #ff1744;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #ff1744;
+    color: white;
+}
+
+.yes:hover {
+    background: #ff4569;
+    transform: scale(1.1);
+}
+
+.no {
+    background: #222;
+    color: white;
+    position: relative;
+}
+
+.gif {
+    margin-top: 20px;
+    max-width: 300px;
+    animation: fadeIn 2s;
+}
+
+/* Hearts */
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
